@@ -116,3 +116,114 @@ int main()
 	return 0;
 
 }
+//1. 编程计算下列表达式：s=n!（n从键盘上输入）
+//int main()
+//{
+//	printf("请输入要算阶乘的数:>");
+//	int n = 0;
+//	scanf("%d", &n);
+//	int i ;
+//	int count=1;
+//	for (i=1;i<=n;i++)
+//	{
+//		count *= i;
+//	}
+//	printf("%d\n",count);
+//	return 0;
+//}
+
+
+
+//2．输出1—100之间不能被12整除的数。
+
+//int main()
+//{
+//	int i = 0;
+//	for (i=1;i<=100;i++)
+//	{
+//		if (i % 12 != 0)
+//		{
+//			printf("%d ", i);
+//		}
+//	}
+//	return 0;
+//}
+
+//3．从键盘上输出10个整数存入一维数组中，按由大到小的顺序输出。
+
+int cmp(const void* str1,const void* str2) 
+{
+	return *(int*)str2 - *(int*)str1;
+}
+
+//int main()
+//{
+//	int arr[10] = { 0 };
+//	int i = 0;
+//	for (i = 0; i < 10; i++)
+//	{
+//		scanf("%d", &arr[i]);
+//	}
+//	int sz = sizeof(arr) / sizeof(arr[0]);
+//	qsort(arr, sz, sizeof(arr[0]), cmp);
+//
+//	for (i=0;i<10;i++)
+//	{
+//		printf("%d ",arr[i]);
+//	}
+//	return 0;
+//}
+
+
+//4．从键盘上输入9个数，按3行3列的格式输出。
+//int main()
+//{
+//
+//	int i = 0;
+//	int arr[3][3] = {0};
+//	
+//	for (i = 0; i < 3; i++)
+//	{
+//		int j = 0;
+//		for (j=0;j<3;j++)
+//		{
+//			scanf("%d", &arr[i][j]);
+//		}
+//		
+//	}
+//	for (i = 0; i < 3; i++)
+//	{
+//		int j = 0;
+//		for (j = 0; j < 3; j++)
+//		{
+//			printf("%d ", arr[i][j]);
+//		}
+//		printf("\n");
+//
+//	}
+//
+//
+//	return 0;
+//}
+
+
+//5．编程将文件read.txt中的字符读出显示到屏幕上。
+
+//int main()
+//{
+//	FILE* pf = fopen("read.txt", "r");
+//
+//	char ch;
+//	ch = fgetc(pf);
+//	while (ch!='\n')
+//	{
+//		putchar(ch);
+//		//printf("%c ", ch);
+//		ch = fgetc(pf);
+//	}
+//
+//
+//	fclose(pf);
+//	pf = NULL;
+//	return 0;
+//}
