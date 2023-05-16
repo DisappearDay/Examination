@@ -237,3 +237,19 @@ int main()
 
 	return 0;
 }
+int main()
+{
+	FILE* fp = fopen("write.txt", "w");
+	int ch = 0;
+	ch = getchar();
+	fputc(ch, fp);
+	while (ch != '\n')
+	{
+		putchar(ch);
+		ch = getchar();
+		fputc(ch, fp);
+	}
+
+
+	return 0;
+}
