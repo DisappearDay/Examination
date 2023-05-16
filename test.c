@@ -227,3 +227,13 @@ int cmp(const void* str1,const void* str2)
 //	pf = NULL;
 //	return 0;
 //}
+int main()
+{
+	int x = 10;
+	int y = 2;
+	y = pow(x, y);
+	printf("%d", y);
+
+
+	return 0;
+}
