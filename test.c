@@ -287,3 +287,183 @@ int main()
 
 	return 0;
 }
+//int main()
+//{
+//	int x = 3;
+//	do
+//	{
+//		printf("%3d", x -= 2);
+//	} while (!(--x));
+//	return 0;
+//}
+
+//void main()
+//{
+//	int i, j, n = 5;
+//	for (i = 1; i <= n; i++)
+//	{
+//		for (j = 1; j <= n - i; j++)
+//			printf(" ");
+//		for (j = 1; j <= i; j++)
+//			printf("%d", i);
+//		printf("\n");
+//	}
+//}
+
+//int main()
+//{
+//	int a[10], * p, * q ,r;
+//	p = &a[3];
+//	q = &a[6];
+//	r = q - p;
+//	printf("%d\n", r);
+//
+//	return 0;
+//}
+
+//void main()
+//{
+//	int a[10], i, k = 0;
+//	for (i = 0; i < 10; i++)
+//		a[i] = i;
+//	for (i = 1; i < 4; i++)
+//		k += a[i] + i;
+//	printf("%d\n", k);
+//	return 0;
+//}
+//
+//void main(void)
+//{
+//	int i, m, k;
+//	for (m = 2; m <= 100; m++)
+//	{
+//		k = m-1;
+//		for (i = 2; i <= k; i++)
+//			if (m % i == 0)
+//				break;
+//		if (i >= k + 1)
+//			printf("%d", m);
+//	}
+//}
+
+//任意读取一个整数，依次输出其符号位及从低位到高位上的数字
+
+//int main()
+//{
+//	printf("请输入一个整数：");
+//	int x = 0;
+//	scanf("%d", &x);
+//	if (x > 0)
+//	{
+//		while (x)
+//		{
+//			printf("%d", x % 10);
+//			x /= 10;
+//		}
+//	}
+//	else  if (x == 0)
+//	{
+//		printf("0");
+//	}
+//	else
+//	{
+//		int y=abs(x);
+//		printf("-");
+//		while (y)
+//		{
+//			printf("%d", y % 10);
+//			y /= 10;
+//		}
+//	}
+//
+//	return 0;
+//}
+
+//sin x=x- x3/3!+x5/5!-x7/7!+……+(-1)^(n+l)x(2n-1)/(2n-1)!+……  n=10;
+//int main()
+//{
+//	printf("请输入一个值：");
+//	int x = 0;
+//	scanf("%d", &x);
+//	int i = 0;
+//	int k=1;
+//	int sum = 0;
+//	for (i = 1; i <= 10; i++)
+//	{
+//		int sign=pow(-1, i + 1);
+//		int res = pow(x, 2 * i - 1);
+//		int j = 0;
+//		for (j = 1; j <= 2 * i - 1; j++)
+//		{
+//			k = k * j;
+//		}
+//		sum+=(sign * res) / k;
+//	}
+//	printf("%d\n", sum);
+//	return 0;
+//}
+// 
+// 
+// 
+//float Sin(float x)
+//{
+//    int n;                //项数n。    
+//    n = 10;
+//    float sum = 0;               //前n项和sum。
+//    float t;
+//    int i;
+//    t = x;
+//    sum = t;
+//    for (i = 2; i <= n; i++)
+//    {
+////sin x = x - x3 / 3!+ x5 / 5!- x7 / 7!+ …… + (-1) ^ (n + l)x(2n - 1) / (2n - 1)!+ ……  n = 10;
+//        t = -1 * t * x * x / ((2 * i - 2) * (2 * i - 1));           //t赋值第i项。
+//        sum += t;
+//    }
+//    return sum;
+//}
+//void main() {
+//    float x;
+//    scanf("%f", &x);
+//    printf("%0.3f\n", Sin(x));
+//}
+
+
+//设有三个候选人，每次输入一个得票的候选人的名字，要求最后输出各人得票结果。30个人进行投票。
+struct person
+{
+	char name[20];
+	int count;
+}candidates[3]={"Li",0,"Zhang",0,"Liu",0};
+
+
+int main()
+{
+	int n = 30;
+	char* arr[20]={0};
+	while (n)
+	{
+		printf("请在Li Zhang Liu三人中选择一人投票：");
+		scanf("%s", arr);
+		if (strcmp(arr, candidates[0].name) == 0)
+		{
+			candidates[0].count++;
+			n--;
+		}else if (strcmp(arr, candidates[1].name) == 0)
+		{
+			candidates[1].count++;
+			n--;
+		}else if (strcmp(arr, candidates[2].name) == 0)
+		{
+			candidates[2].count++;
+			n--;
+		}
+		else
+		{
+			printf("输入错误，请重新输入\n");
+		}
+		
+	}
+	printf("Li获得%d票 Zhang获得%d票 Liu获得%d票", candidates[0].count, candidates[1].count, candidates[2].count);
+	return 0;
+}
