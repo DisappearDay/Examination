@@ -253,3 +253,37 @@ int main()
 
 	return 0;
 }
+//从键盘上输入10个评委的评分，去掉一个最高的去掉一个最低的
+//求出其余8人的平均分，输出平均分，最高分，最低分
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int is_cmp(const void* str1,const void* str2)
+{
+	return *((int*)str1) - *((int*)str2);
+}
+
+int main()
+{
+	int arr[10] = { 0 };
+	int i = 0;
+	for (i=0;i<10;i++)
+	{
+		scanf("%d", &arr[i]);
+	}
+	int sz = sizeof(arr) / sizeof(arr[0]);
+
+	qsort(arr, sz, sizeof(arr[0]), is_cmp);
+
+	int count = 0;
+	
+	for (i = 1; i < 9; i++)
+	{
+		count += arr[i];
+	}
+	printf("avg=%d max=%d min=%d", count / 10, arr[9], arr[0]);
+
+	return 0;
+}
