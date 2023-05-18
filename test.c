@@ -467,3 +467,71 @@ int main()
 	printf("Li获得%d票 Zhang获得%d票 Liu获得%d票", candidates[0].count, candidates[1].count, candidates[2].count);
 	return 0;
 }
+//给定一个整数（正整数、负整数、零），请输出它的逆序数。
+//int main()
+//{
+//	int x = 0;
+//	scanf("%d", &x);
+//	if (x > 0)
+//	{
+//		while (x)
+//		{
+//			if (x % 10)
+//			{
+//				printf("%d", x % 10);
+//			}
+//			x=x / 10;
+//		}
+//	}
+//	else if (x < 0)
+//	{
+//		int y=abs(x);
+//		printf("-");
+//		while (y)
+//		{
+//			if (y % 10)
+//			{
+//				printf("%d", y % 10);
+//			}
+//			y=y / 10;
+//		}
+//	}
+//	else
+//	{
+//		printf("0");
+//	}
+//	return 0;
+//}
+
+
+//统计一个英文句子(长度不大于 80)中含有英文单词的个数，单词之间用空格隔开。
+int Find_Space(char* str)
+{
+	int count=0;
+	/*while (*str!='\0')
+	{
+		if (*str == ' ')
+		{
+			count++;
+		}
+		str++;
+	}*/
+	int i = 0;
+	for (i = 0; i < 80; i++)
+	{
+		if (*(str + i) == ' ')
+		{
+			count++;
+		}
+	}
+	return count + 1;
+}
+
+int main()
+{
+	char arr[80] = { 0 };
+	gets(arr);
+	int res=Find_Space(arr);
+	printf("%d\n", res);
+	return 0;
+}
