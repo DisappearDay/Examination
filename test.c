@@ -646,3 +646,5 @@ int main()
 	p = a[0];
 	printf("%d", p[0]);
 }
+
+
