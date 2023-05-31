@@ -5,6 +5,7 @@
 //	int a;
 
 //	int b;
+
 //	int c;
 //	printf("请输入三个数");
 //	scanf("%d", &a);
