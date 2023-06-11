@@ -12,6 +12,7 @@
 //	scanf("%d", &a);
 //	scanf("%d", &b);
 //	scanf("%d", &c);
+
 //	if (a > b)
 //	{
 //		if (a > c)
