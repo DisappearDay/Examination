@@ -652,5 +652,215 @@ int main()
 	printf("%d", p[0]);
 }
 
+struct stu
+{
+	int a;
+	float b;
+}data,*p=&data;
+//int main()
+//{
+//	/*char* arr = "\\TOP\t\65\"";
+//	printf("%ld\n", sizeof(arr));
+//	return 0;*/
+//
+//	//int x = -1;
+//	//do
+//	//{
+//	//	x = x * x;
+//	//	// 10000001
+//	//	// 11111110
+//	//	// 11111111
+//	//	//
+//	//} while (!x);
+//	//
+//	//printf("%d\n", x);
+//	//
+//	/*int a[] = { 1,2,4 };
+//	char arr[3] = "abc";
+//	int sz=sizeof(arr);
+//	printf("%d", sz);*/
+//	//char str1[] = "string";
+//	//char str2[5];
+//	//strcpy(str1, "HELLO");
+//	////strcpy(str2, "HELLO");
+//	//printf("%s\n", str1);
+//	////printf("%s\n",str2);
+//
+//
+//
+//
+//
+//	//char ch = 'w';
+//	////如果是小写字母返回非零值，如果不是小写字符返回0；
+//	//int ret = islower(ch);
+//	////十进制数字0-9
+//	//int ret1 = isdigit(ch);
+//	////空白字符“空格” 换页"\f" 换行"\n"  回车"\r" 制表符"\t" 垂直制表符"\v"
+//	//int ret1 = isspace(ch);
+//	////十六进制包括a-f A-F
+//	//int ret1 = isxdigit(ch);
+//	////任何控制字符
+//	//int ret1 = iscntrl(ch);
+//	////大写字母A-Z
+//	//int ret1 = isupper(ch);
+//	////字母a-z，字母A-Z
+//	//int ret1 = isalpha(ch);
+//	////字母或者数字 a-z，字母A-Z  数字0-9
+//	//int ret1 = isalnum(ch);
+//	////标点符号，任何不属于数字或者字母的图形字符
+//	//int ret1 = ispunct(ch);
+//	////任何图形字符
+//	//int ret1 = isgraph(ch);
+//	////任何可打印字符包括图形字符和空白字符
+//	//int ret1 = isprint(ch);
+//	//int ret1 = printf("%d\n", ret);
+//
+//	////字符转换
+//	////tolower--转小写字母
+//	////toupper--转大写字母
+//	//
+//	////如果是小写不动，大写转化为小写
+//	//char ch = tolower('Q');
+//	////printf("%c\n",ch);
+//	//putchar(ch);
+//
+//
+//
+//
+//	return 0;
+//
+//
+//}
 
+
+
+//十进制转换为十六进制
+
+
+
+
+//#include"stdio.h" 
+//#include"stdlib.h" 
+//	int main(void) {
+//		int n, a1, count = 0, j;//count 用于角标的计数，j 控制 for 循环 
+//		int a[100];
+//		printf("请输入十进制数:");
+//		scanf_s("%d", &n);
+//		if (n == 0)
+//			printf("%d", n);
+//		while (n != 0) {
+//			a1 = n;
+//			n = n / 16;
+//			a[count] = a1 % 16;
+//			count++;
+//		}
+//		for (j = count - 1; j >= 0; j--) {
+//			if (a[j] > 9 && a[j] < 16)
+//				printf("%c", (a[j] - 10 + 'A'));
+//			else
+//				printf("%d", a[j]);
+//		}
+//		printf("\n");
+//		return 0;
+//	}
+
+void fun(int n)
+{
+	if (n > 1)
+	{
+		fun(n - 1);
+	}
+	printf("n=%d ", n);
+	return;
+}
+
+//int main(int argc, char* argv[])
+//{
+//	fun(100);
+//	return 0;
+//}
+
+//int main()
+//{
+//	/*int a = 15;
+//	int b = 6;
+//	double c = 2.5;
+//	printf("%lf\n",a?b:c);
+//	printf("%lf\n", (a % b) / c);*/
+//	int a[1024] = { 2,3,4,5 },*p=a;
+//	printf("%d\n", *(a + 2));
+//	printf("%d\n", *(p + 1));
+//
+//
+//	return 0;
+//}
+
+
+
+//#include <stdio.h>
+//#include <sys/types.h>
+//#include <sys/stat.h>
+//
+//int lcd_fd;
+//char* shared_addr;
+//
+//void open_lcd()
+//{
+//	
+//}
+//
+////申请共享内存
+//char* shared_addr = mmap(NULL, );
+//
+//
+//int show_bmp()
+//{
+//
+//}
+//
+//void close_lcd()
+//{
+//	
+//}
+//
+//int main()
+//{
+//	open_lcd();
+//
+//
+//	show_bmp("1.bmp");//显示一张屏幕大小的图片
+//
+//	sleep(1);
+//
+//	show_bmp("2.bmp");
+//
+//
+//
+//	close_lcd();
+//	return 0;
+//}
+
+
+char* dele(char* str)
+{
+	int n = 0, i;
+	for (i = 0; str[i]; i++)
+	{
+		if (str[i]<'0'&&str[i]>'9')
+		{
+			str[n++] = str[i];
+		}
+		str[n] = '\0';
+	}
+	return str;
+}
+
+
+int main()
+{
+	
+	
+	printf("%s\n", dele("1abg2c4d8"));
+	return 0;
+}
 
