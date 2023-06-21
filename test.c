@@ -861,4 +861,111 @@ int main()
 	printf("%s\n", dele("1abg2c4d8"));
 	return 0;
 }
+//试编程计算a+ aa+ aa...+ aa..a (n个a)的值，n和a的值由键盘输入。
+int is_overlay(int a, int n)
+{
+	int i ;
+	long int count = 0;
+	int c = 0;
+	c = a;
+	for (i = 1; i < n; i++)
+	{
+		a =a+a*10;
+		count += a;
+	}
+	return count + c;
+}
+//int main()
+//{
+//	int a,n;
+//	printf("请输入n的值：");
+//	scanf_s("%d", &n);
+//	printf("请输入a的值：");
+//	scanf_s("%d", &a);
+//	printf("%d\n",is_overlay(a, n));
+//	return 0;
+//}
 
+//输入某年某月某日，编程计算这一天是这一-年的第几天。
+
+int is_year(int y)
+{
+	if ((y % 4 == 0 && y % 100 != 0) || (y % 400 == 0))
+	{
+		return 1;
+	}
+	return 0;
+}
+
+//int main()
+//{
+//	int year, month, day,count=0;
+//	printf("请输入年份：");
+//	scanf_s("%d", &year);
+//	printf("请输入月份：");
+//	scanf_s("%d", &month);
+//	printf("请输入日期：");
+//	scanf_s("%d", &day);
+//	int res=is_year(year);
+//
+//
+//	int arr[12] = { 31,28,31,30,31,30,31,31,30,31,30,31 };
+//	if (res == 1)
+//	{
+//		 arr[2] = 29;
+//	}
+//	int i;
+//	for (i = 0; i < month-1; i++)
+//	{
+//		count += arr[i];
+//	}
+//	printf("%d\n", count + day);
+//	return 0;
+//}
+
+//从键盘输入10整数存放到数组中，求解并输出数组中所有元素的最大值、最小值、平均值
+is_M(int* str)
+{
+	int max = *str;
+	int i;
+	for (i = 0; i < 9; i++)
+	{
+		if (max < *(++str))
+		{
+			max = *str;
+		}
+	}
+	return max;
+}
+is_Min(int* str)
+{
+	int min = *str;
+	int i;
+	for (i = 0; i < 9; i++)
+	{
+		if (min > *(++str))
+		{
+			min = *str;
+		}
+	}
+	return min;
+}
+
+int main()
+{
+	int arr[10] = { 0 },count=0;
+	int i ;
+	printf("请输入十个数：\n");
+	for (i = 0; i < 10; i++)
+	{
+		scanf_s("%d", &arr[i]);
+		
+	}
+	for (i = 0; i < 10; i++)
+	{
+		count += arr[i];
+	}
+	printf("最大值是%d\n", is_M(arr));
+	printf("最小值是%d\n",is_Min(arr));
+	printf("平均值是%d\n", count / 10);
+}
