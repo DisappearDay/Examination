@@ -969,3 +969,27 @@ int main()
 	printf("最小值是%d\n",is_Min(arr));
 	printf("平均值是%d\n", count / 10);
 }
+int main()
+{
+	/*float c, f;
+	c = 30.0;
+	f = (6 * c) / 5 + 32;
+	printf("f = % f", f);*/
+
+
+	/*int a = 6095, b;
+	b = a % 1000;
+	printf("%d", b);*/
+
+	float a = 8.0/3.0;
+	float b = 8 / (float)3;
+	printf("%lf %lf", a, b);
+
+
+
+	/*int x = 5, y = 4;
+	printf("%d\n", 13>12?15:6>7?8:9);*/
+	//int a[5] = {1,2,3,4,5};
+	//printf("%d\n", *(a + 2));
+	return 0;
+}
