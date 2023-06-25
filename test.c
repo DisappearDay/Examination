@@ -993,3 +993,176 @@ int main()
 	//printf("%d\n", *(a + 2));
 	return 0;
 }
+
+struct pupil
+{
+	char name[20];
+	int a;
+}pup,*p;
+#include <math.h>
+
+//int main()
+//{
+//
+//
+//	/*struct pupil s = { "zhangsan",20 };
+//	printf("%d\n",p->a);*/
+//
+//	/*int x[10] = { 1,2,3,4,5,6,7,8,9,0 };
+//	printf("%d\n", *(x + 3));*/
+//
+//
+//	/*int a = 1, b = 2, c = 3;
+//	int sz=(a * b) && (b++, !c) && (a++, c++);
+//	printf("%d %d %d %d\n",sz,a,b,c);*/
+//
+//	/*double x = 1;
+//	int a = 2;
+//	printf("%lf\n", 1.5 * exp(x) + sin(x) + log2(pow(x, 3)));*/
+//
+//	//char a = 'a';
+//	//float f = 1;
+//	////int sz=a + f;
+//	//printf("%lf\n", a + f);
+//
+//	/*int w = 10, x = 20, y = 30, z = 40;
+//	printf("%d\n", w < x ? w : y < z ? y : z);
+//*/
+//	/*char* ps[3] = { "hello","good","nice" },*p=ps[1];
+//	printf("%c\n", * (p + 3));
+//*/
+//
+//	//int x = 18;
+//	//	while (x > 10 && x < 50)
+//	//	{
+//	//		x++;
+//	//		if (x / 3)
+//	//		{
+//	//			x++;
+//	//			break;
+//	//		}
+//	//		else
+//	//			continue;
+//	//	}
+//	//printf("%d\n", x);
+//
+//
+//
+//	return 0;
+//
+//}
+
+struct tree
+{
+	int x;
+	char *s;
+}t;
+
+
+int fun(struct tree t)
+{
+	t.x = 20;
+	t.s = "zhangsan";
+
+}
+
+
+//int main()
+//{
+//	/*t.x = 1;
+//	t.s = "minicomputer";
+//	fun(t);
+//	printf("%d %s\n", t.x, t.s);*/
+//
+//	char ch[2][5] = { "1234", "5678" }, * p[2];
+//	int i, j,s = 0;
+//	for (i = 0; i < 2; i++)p[i] = ch[i];
+//	for (i = 0; i < 2; i++)
+//		for (j = 0; p[i][j] > '\0'; j+=2)
+//		      s = 10 * s + p[i][j] - '0';
+//
+//		printf("%d\n",s);
+//	return 0;
+//}
+
+
+#include <stdio.h> //C++: #include <iostream.h>
+struct node { int data; struct node* next; };
+typedef struct node NODETYPE;
+//void main()
+//{
+//	NODETYPE a, b, c, * h, * p;
+//	a.data = 10; b.data = 20; c.data = 30;
+//	h = &c;
+//	c.next = &b; b.next = &a; a.next = '\0';
+//	p = h;
+//	while (p) {
+//		printf("%d", p->data); // C++: cout<<( p->data);
+//		p = p->next;
+//	}
+//}
+//1、定义一个函数，计算并返凹如卜算式的值:
+//在主函数中，输入10组实数a、b、c的值，并将这10组a、b、c的值和上式的计算结果写入文件data.txt中，
+//同时输出到屏幕上。要求每- -组值在文件和在屏幕上均占一行。
+
+
+double calculate(double a, double b, double c)
+{
+	return (4.25 * (a + b) + log(a + b + pow(a + b, 0.5) + (double)1 / (a + b))) / (4.25 * c + log(c + pow(c, 0.5) +(double) 1 / c));
+}
+
+//int main()
+//{
+//
+//	int i = 0;
+//	double a[10] = { 0 };
+//	double b[10] = { 0 };
+//	double c[10] = { 0 };
+//	for (i = 0; i < 10; i++)
+//	{
+//		printf("请输入第%d组数据", i + 1);
+//		scanf("%lf", &(a[i]));
+//		scanf("%lf", &(b[i]));
+//		scanf("%lf",&(c[i]));
+//	}
+//	double res[10] = { 0 };
+//	for (i = 0; i < 10; i++)
+//	{
+//        res[i] = calculate(a[i], b[i], c[i]);
+//	}
+//	
+//	
+//	
+//	FILE* fp = fopen("test.txt", "w");
+//
+//	double stream[10][4] = { 0 };
+//	for (i = 0; i < 10; i++)
+//	{
+//		stream[i][1] = a[i];
+//		stream[i][2] = b[i];
+//		stream[i][3] = c[i];
+//		stream[i][4] = res[i];
+//	}
+//
+//	for (i = 0; i < 10; i++)
+//	{
+//		fwrite(stream[i], 8, 4, fp);
+//		/*fputc(a[i], fp);
+//		fputc(b[i], fp);
+//		fputc(c[i], fp);
+//		fputc(res[i], fp);*/
+//		fputc('\n', fp);
+//	}
+//	
+//	fclose(fp);
+//	fp = NULL;
+//
+//	for (i = 0; i < 10; i++)
+//	{
+//		printf("%lf %lf %lf %lf\n", a[i], b[i], c[i], res[i]);
+//	}
+//
+//
+//
+//	return 0;
+//}
