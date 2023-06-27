@@ -1166,3 +1166,66 @@ double calculate(double a, double b, double c)
 //
 //	return 0;
 //}
+//int main()
+//{
+//
+//	/*int x = 0, y = 1, z = 2;
+//	x = y + z + 2, ++y;
+//	*/
+//
+//	/*int a = 'A' + '7' - '3';
+//	int b = 'A' + '7' - '4';
+//	printf("%c %d", a, b);*/
+//	/*int x = 1, y = 0;
+//	if (!x) y++;
+//	else if (x == 0)
+//		if(x)
+//			y += 2;
+//	    else
+//		    y += 3;
+//	printf("%d\n", y);*/
+//
+//	int i, j, m = 1;
+//	for (i = 1; i < 3; i++)
+//	{
+//		for (j = 3; j > 0; j--)
+//		{
+//			if (i * j > 3) break;
+//			m *= i * j;
+//		}
+//
+//	}
+//		printf(" m=%d\n", m);
+//
+//	
+//
+//
+//
+//	return 0;
+//}
+
+
+//编写程序，求出如下分数序列的前n项之和。
+//2/1，3/2， 5/3， 8/5,13/8，21/13,
+//例如,若n=5,则应输出8. 391667.
+
+
+//int main()
+//{
+//	double x = 1,y = 1,res=0;
+//	int n;
+//	printf("请输入一个数：");
+//	scanf("%d", &n);
+//	int i = 0;
+//	for (i=0;i<n;i++)
+//	{
+//		double temp = x;
+//		x = x + y;
+//		y = temp;
+//		res += x / y;
+//	}
+//	
+//	printf("%lf\n", res);
+//
+//	return 0;
+//}
