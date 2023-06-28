@@ -1229,3 +1229,74 @@ double calculate(double a, double b, double c)
 //
 //	return 0;
 //}
+#define P 10
+//int main()
+//{
+//
+//	/*int x = 2;
+//	double y = 3.6;
+//	double z = 4.5;
+//	int a = 123605;
+//	int b = -12;
+//	printf("%5d%5d", a, b);*/
+//	//printf("%d\n", (int)(x * y + y * z));
+//
+//	//int a;
+//	//char b;
+//	//double c;
+//	//scanf("%d%c%f", &a, &b, &c);
+//	//printf("%d  %c  %lf", a, b, c);
+//
+//	/*int a = 0, b = 3, c = 4;
+//	printf("%d\n", a == b < c);*/
+//	/*char* arr1 = "abcdefg";
+//	char* arr2 = "abceefg";
+//	printf("%d\n", strcmp(arr2, arr1));*/
+//
+//	int r = 12;
+//	printf("%1d%2d", P, r);
+//
+//
+//	return 0;
+//}
+
+
+//int main()
+//{
+//	int a = 1, b = 12, c = 0;
+//	printf("%d\n", a < b && (a = 1));
+//	printf("%d\n", a < b && (a = 0));
+//	printf("%d\n", a > b || (a == 0));
+//	return 0;
+//}
+
+//用函数递归的方式求费波那西(Fibonacci)数列第n项Fn。这个数列有如下特点:第1、2两个数
+//为1、1。从第3个数开始，该数是其前面两个数之和。(要求 n由键盘输入) (15 分)
+
+
+
+
+int main()
+{
+	int a = 1, b = 1,n;
+	printf("请输入n的值：");
+	scanf("%d", &n);
+	if (n<=2)
+	{
+		printf("%d\n", 1);
+	}
+	else
+	{
+		while (n>2)
+		{
+			int temp = a;
+			a = b;
+			b = temp + b;
+			n--;
+		}
+		printf("%d\n", b);
+	}
+	
+
+	return 0;
+}
