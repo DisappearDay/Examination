@@ -1300,3 +1300,111 @@ int main()
 
 	return 0;
 }
+
+//int main()
+//{
+//	/*int x = 0;
+//	printf("1:%d,", printf("2:%d,", scanf("%d", &x)));
+//	*/
+//	int i = 1,j = 0;
+//	while (i)
+//	{
+//		switch (i)
+//		{
+//		case 1:
+//			i += 1; j++; break;
+//		case 2:
+//			i += 2; j++; break;
+//		case 3:
+//			i += 3; j++; break;
+//		default:
+//			i--; j++; break;
+//		}
+//	}
+//	printf("%d\n", j);
+//
+//	
+//	return 0;
+//}
+
+//int main()
+//{
+//	/*char a[][20] = { "beijing","shanghai","tianjin","chongqing" };
+//	printf("%c\n",a[30]);*/
+//	//int b = 32768;
+//	//int a = 032;
+//	//int c = 0xAF;
+//	////printf("%x", -1);
+//	//long i = 32768;
+//	//printf("%d\n", i);
+//
+//
+////	int i = 0;
+//////	printf("%d\n", 20 - 0 <= i <= 9);
+////	int x = 1, y = 1, z = 1;
+////	
+////	printf("%d\n", x++ + y++ + z++);
+//
+//
+//
+//
+//	printf("%d\n", 12 | 012);
+//	return 0;
+//}
+
+
+char* combine(char* str1,char*str2)
+{
+	int i=0,j=0;
+	char arr[15] = { 0 };
+	int a=sizeof(str1);
+	int b = sizeof(str2);
+	if (a >= b)
+	{
+		while (a)
+		{
+			arr[i++] = str1[j];
+			if (str2[j] != '\0')
+			{
+				arr[i++] = str2[j];
+			}
+			j++, a--;
+		}
+	}
+	else
+	{
+		while (b)
+		{
+			arr[i++] = str2[j];
+			if (str1[j] != '\0')
+			{
+				arr[i++] = str1[j];
+			}
+			j++, b--;
+		}
+	}
+	return arr;
+}
+
+//int main()
+//{
+//	FILE* pf1=fopen("a.txt", "w+");
+//	FILE* pf2=fopen("b.txt", "r");
+//	char arr1[20] = { 0 };
+//	char arr2[10] = { 0 };
+//
+//	fgets(arr1, 10, pf1);
+//	fgets(arr2, 10, pf2);
+//
+//	char *arr3 = combine(arr1, arr2);
+//
+//	int res=fwrite(arr3, sizeof(char), 20, pf1);
+//	printf("%d\n", res);
+//
+//	 fclose(pf1);
+//	 fclose(pf2);
+//	 pf1 = NULL;
+//	 pf2 = NULL;
+//
+//	return 0;
+//}
