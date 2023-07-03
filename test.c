@@ -1408,3 +1408,89 @@ char* combine(char* str1,char*str2)
 //
 //	return 0;
 //}
+
+//int main()
+//{
+//	int a = 10;
+//	switch (a)
+//	{
+//	case '1':
+//		printf("ONE\n");
+//		break;
+//	case'2':
+//		printf("TOW\n");
+//		break;
+//	default:
+//		printf("NONE\n");
+//		break;
+//	}
+//
+//	return 0;
+//}
+
+
+#include <stdio.h>
+
+//int main()
+//{
+//	float f = 0.0f;
+//	int i;
+//
+//	for (i = 0; i < 10; i++)
+//		f = f + 0.1f;
+//
+//	if (f == 1.0f)  //不能用两个浮点数进行比较   if((f-0.1f)<0.1)
+//		printf("f is 1.0 \n");
+//	else
+//		printf("f is NOT 1.0 \n");
+//
+//	return 0;
+//}
+
+enum a
+{
+	one = 9,
+	tow = -1,
+	three
+};
+
+//int main()
+//{
+//	int i;
+//	for (i = 2; i == 0;)
+//	{
+//		printf("%d\n", i--);
+//	}
+//	return 0;
+//}
+
+struct abc
+{
+	int no;
+
+}s1 ,*pa=&s1;
+
+
+
+int data()
+{
+	double x = 9.9;
+		return (x);
+}
+
+//int main()
+//{
+//	/*char* a = 'abc';
+//	printf("%s\n",a);*/
+//
+//	//int a = 2, b = 80, c = -2;
+//	//printf("%d\n", a && b && c);
+//
+//	/*int arr[3][4] = { {1,3,5,7},{2,4,6,8} };
+//	printf("%d\n", *(*arr + 1));*/
+//	/*pa->no = 12;
+//	printf("%d\n", pa->no);*/
+//	printf("%d\n", data());
+//
+//	return 0;
+//}
