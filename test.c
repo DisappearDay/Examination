@@ -1494,3 +1494,49 @@ int data()
 //
 //	return 0;
 //}
+
+//int main()
+//{
+//	//int x , y , z,t ;
+//	//x = y = z = 0;
+//	//t=++x || ++y && ++z;
+//	//printf("%d %d %d %d\n", x, y, z,t);
+//	char  c;
+//	c=getchar();
+//	if ('A' <=c&&c <= 'Z')
+//	{
+//		c = 'Z' - c + 'A';
+//	}
+//	if ('a' <= c && c <= 'z')
+//	{
+//		c = 'z' - c + 'a';
+//	}
+//	putchar(c);
+//
+//
+//	return 0;
+//}
+
+struct Student
+{
+	int grade[4];
+	int crdit[4];
+
+};
+
+
+//int main()
+//{
+//	struct Student s[30] = { 0 };
+//	int i = 0;
+//	for (i = 0; i < 30; i++)
+//	{
+//		printf("请输入第%d位同学的高等数学，大学英语，数字逻辑，离散数学的成绩",i+1);
+//		scanf("%d", s[i].grade[0]);
+//		scanf("%d", s[i].grade[1]);
+//		scanf("%d", s[i].grade[2]);
+//		scanf("%d", s[i].grade[3]);
+//	}
+//
+//	return 0;
+//}
