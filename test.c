@@ -1540,3 +1540,107 @@ struct Student
 //
 //	return 0;
 //}
+//int main()
+//{
+//
+//	//int x=3, y=4, z=5;
+//	//printf("%d\n",!((x < y) && !z || 1));
+//
+//	/*int x=-1, y ;
+//	y = -1;
+//	if (x != 0)if (x > 0)y = 1; else y = 0;
+//	printf("%d\n", y);*/
+//	/*int k;
+//	while (k = 0)
+//	{
+//		;
+//	}*/
+//	//int a[10] = {10*1};
+//	int a=1;
+//	char f=2;
+//	double i=3.3422;
+//	printf("%lf\n", 10 + 'a' + i * f);
+//
+//	char a[] = { 40,24,39,20 };
+//
+//	return 0;
+//}
+
+
+
+//#define N 4
+//struct man {
+//	char name[20];
+//	int age;
+//} person[N] = { "li", 18,"wang",19,"zhang" , 23,"sun", 22};
+//int main() {
+//	struct man* q=NULL, * p=NULL;
+//	int i, m = 0;
+//	p = person;
+//	for (i = 0; i < N; i++) {
+//		if (m < p->age) { q = p++; m = q->age; }
+//	}
+//		printf(" %s, %d\n" , (*q).name, (*q).age) ;
+//		printf(" %s, %d\n" , (*p).name, (*p).age);
+//		}
+//
+//
+
+
+//2、键盘输入1串字符(长度不超过100)， 保留其中大小写英文字母、空格和英文句号’.’，删
+//除其余字符并屏幕输出结果，然后颠倒该字符串输出。
+
+char* go_move(char* arr1)
+{
+	
+
+	char arr2[100] = {0};
+	int i = 0,j=0;
+	for (i = 0; arr1[i] != '\0'; i++)
+	{
+		if ((*arr1 >= 'a' && *arr1 <= 'z') || (*arr1 >= 'A' && *arr1 <= 'Z') || *arr1 == ' ' || *arr1 == '.')
+		{
+			arr2[j++] = arr1[i];
+		}
+		
+	}
+	/*while (*arr1!='\0')
+	{
+		if ((*arr1 >= 'a' && *arr1 <= 'z') || (*arr1 >= 'A' && *arr1 <= 'Z') || *arr1 == ' ' || *arr1 == '.')
+		{
+			*arr2++ = *arr1;
+		}
+		arr1++;
+		
+	}*/
+	return arr2;
+
+}
+char* is_reverse(char* str)
+{
+	int count = 0;
+	char* p = str;
+	while (*p != '\0')
+	{
+		count++;
+		p++;
+	}
+	int i;
+	for (i = 0; i < count-i; i++)
+	{
+			char temp = str[i];
+			str[i] = str[count - i];
+			str[count - i] = temp;
+	}
+	return str;
+
+}
+
+int main()
+{
+	char arr[100] = { 0 };
+	gets(arr);
+	char* str=go_move(arr);
+	printf("%s\n",is_reverse(str));
+	return 0;
+}
