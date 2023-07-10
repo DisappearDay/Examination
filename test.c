@@ -1642,5 +1642,9 @@ int main()
 	gets(arr);
 	char* str=go_move(arr);
 	printf("%s\n",is_reverse(str));
+	/*int x = 1-2e5;*/
+
+
+	printf("%d\n",'\x49');
 	return 0;
 }
