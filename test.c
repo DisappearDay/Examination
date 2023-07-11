@@ -1644,7 +1644,33 @@ int main()
 	printf("%s\n",is_reverse(str));
 	/*int x = 1-2e5;*/
 
-
+//	/*int x = 1, y = 1, z = 0,m=0;
+//	z = (y++, ++y);
+//
+//	m = (++y, ++y);
+//	printf("%d  %d\n",z,m);*/
+//
+//	int i = 1;
+//	/*printf("%d %d\n", i++, i--);
+//	printf("%d\n", i);*/
+//
+//
+//	printf("%d %d\n", ++i, ++i);
+//	printf("%d\n", i);
+//
 	printf("%d\n",'\x49');
 	return 0;
+}
+#include <conio.h>
+#include<stdlib.h>
+void main()
+{
+	char ch1;
+	char ch2;
+	printf("\n请输入ch1值(使用getche())：");
+	ch1 = getche();
+	printf("\nch1=%c\n", ch1);
+	printf("\n请输入ch2值(使用getchar())：");
+	ch2 = getchar();
+	putchar(ch2); // 输出字符
 }
