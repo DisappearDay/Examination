@@ -1674,3 +1674,29 @@ void main()
 	ch2 = getchar();
 	putchar(ch2); // 输出字符
 }
+
+int main()
+{
+
+	int arr[10] = { 1,3,6,7,9,2,4,8,0,5 };
+	int i;
+	for (i = 0; i < 10; i++)
+	{
+		int j;
+		for (j = 0; j < 10; j++)
+		{
+			if (arr[i] < arr[j])
+			{
+				int temp = arr[i];
+				arr[i] = arr[j];
+				arr[j] = temp;
+			}
+		}
+	}
+	for (i = 0; i < 10; i++)
+	{
+		printf("%d ", arr[i]);
+	}
+
+	return 0;
+}
