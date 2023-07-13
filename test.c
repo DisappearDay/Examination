@@ -1700,3 +1700,84 @@ int main()
 
 	return 0;
 }
+//
+//#include<stdio.h>
+//#define M 3 //行
+//#define N 4 //列
+//void fun1(int(*pa)[N])
+//{
+//	printf("I am fun1 function.\n");
+//	printf("pa : %d\n", pa[0]); // 2个printf打印的结果是一致的，说明
+//	
+//}
+//void fun2(int a[][N])
+//{
+//	printf("I am fun2 function.\n");
+//	printf("%d\n", a[0][0]); // 2个printf打印的结果是一致的，说明地址
+//	
+//}
+//void fun3(int a[M][N])
+//{
+//	printf("I am fun3 function.\n");
+//	printf("%d\n", a[0][0]); // 2个printf打印的结果是一致的，说明地址
+//	
+//}
+//int main()
+//{
+//	int arr[M][N] = { 1, 2, 3, 4,
+//	5, 6, 7, 8,
+//	9, 10,11,12 };
+//	fun1(arr);
+//	printf("二维数组：%p\n", arr[0]);
+//	printf("二维数组：%d\n", *arr[0]);
+//	printf("二维数组：%d\n", arr[0][0]);
+//	printf("二维数组：%p\n", &arr[0][0]);
+//	printf("%d\n", arr);
+//	int array[3] = { 10,20,30 };
+//	printf("一维数组：%d\n", &array[0]);
+//	printf("一维数组：%d\n", array[0]);
+//	/* 注意：一维数组和二维数组a[0]首元素的区别：
+//	一维数组中：
+//	
+//	3 例题：
+//	1）有以下程序：
+//	执行后输出的结果为：？
+//	a[0] ： 指数组中第一个元素的值
+//	&a[0] : 指数组中第一个元素的值所在的地址
+//	二维数组中：
+//	a[0] : 指第一行所在的第一个元素存储的地址
+//	a[i] : 指第i行所在的第一个元素存储的地址
+//	*a[i] : 指第i行所在的第0个元素存储的值
+//	a[0][0] : 指第0行第0列元素的值
+//	&a[0][0]: 指第0行第0列元素的值的地址*/
+//	fun2(arr);
+//	fun3(arr);
+//}
+
+
+
+//int main()
+//{
+//	double* p1;
+//	char* p2;
+//	int* p3;
+//	printf("%d\n%d\n%d\n", sizeof(p1), sizeof(p2), sizeof(p3)); // 8 8 8
+//}
+
+
+
+
+int main()
+{
+	char ch[] = "I love China!";
+	char* p = ch; // 定义字符指针，指向字符数组中的第一个元素。
+	puts(p); //输出字符数组
+	//char ch[] = "I love China!";
+	//char* p; //定义指针
+	// p = &ch[0]; //初始化指针变量
+	p = ch;
+	putchar(*p);
+	puts(p); //puts() 形参传入的是元素的地址
+	printf("%s\n", p); // printf 形参传入的是元素的地址
+	printf("%c\n", *p);
+}
